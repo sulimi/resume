@@ -28,7 +28,7 @@
       <div class="mask"></div>
     </div>
     <main>
-      <div class="userCard">
+      <div class="userCard" style="margin-top: -340px">
         <div class="pictureAndText clearfix">
           <div class="picture">
             <img src="avatar.png" alt="头像">
@@ -83,40 +83,77 @@
           </a>
         </footer>
       </div>
-
-      <a class="button" href="#">下载 PDF 简历</a>
-
-      <p>
+      <div class="wrap-downloadResume">
+        <a class="button downloadResume" href="resume.pdf" target="_blank" download>下载 PDF 简历</a>
+      </div>
+      <p class="selfIntrodution">
         宫森葵，资深制作进行，现为武藏野动画制作主任。<br>
         技能：总能在deadline之前推动动画制作的进度。
       </p>
 
     </main>
-    <section>
+    <section class="skills">
       <h2>特长与爱好</h2>
-      <ol>
-        <li>飙车</li>
-        <li>吃甜甜圈</li>
-        <li>喝酒</li>
-        <li>积极乐观</li>
-        <li>天真</li>
-        <li>脑洞很大</li>
+      <ol class="clearfix">
+        <li>
+          <h3>飙车</h3>
+          <div class="progressBar"></div>
+        </li>
+        <li>
+          <h3>甜甜圈</h3>
+          <div class="progressBar"></div>
+        </li>
+        <li>
+          <h3>喝酒</h3>
+          <div class="progressBar"></div>
+        </li>
+        <li>
+          <h3>跑腿</h3>
+          <div class="progressBar"></div>
+        </li>
+        <li>
+          <h3>拜托人</h3>
+          <div class="progressBar"></div>
+        </li>
+        <li>
+          <h3>擅长脑补</h3>
+          <div class="progressBar"></div>
+        </li>
       </ol>
     </section>
-    <section>
+    <section class="portfolio">
       <h2>作品集</h2>
       <nav>
-        <ol>
-          <li>《第三飞行少女队》</li>
-          <li>《EXODUS！》</li>
-          <li>《五福神》</li>
+        <ol class="clearfix">
+          <li id="portfolio1">所有</li>
+          <li id="portfolio2">框架</li>
+          <li id="portfolio3">原生js&amp;CSS</li>
         </ol>
+        <div id="portfolioBar" class="bar state-1" >
+          <div class="bar-inner"></div>
+        </div>
       </nav>
-
-      <div class="jobs">
-        <div class="big"></div>
-        <div class="small"></div>
-        <div class="small"></div>
+      <script>
+        portfolio1.onclick= function(){
+          portfolioBar.className = 'bar state-1'
+        }
+        portfolio2.onclick= function(){
+          portfolioBar.className = 'bar state-2'
+        }
+        portfolio3.onclick= function(){
+          portfolioBar.className = 'bar state-3'
+        }
+      </script>
+      <div class="works" style="height: 597px;">
+        <div class="big" style="top: 0; left: 0;">
+          <img src="./img/1.jpg" alt="作品1">
+        </div>
+        <div class="small" style="top: 0; left: 645px;">
+          <img src="./img/2.jpg" alt="作品2">
+        </div>
+        <div class="small" style="top: 312px; left: 645px;">
+          <img src="./img/3.jpg" alt="作品3">
+        </div>
       </div>
 
     </section>
