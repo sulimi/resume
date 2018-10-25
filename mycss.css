@@ -44,6 +44,15 @@ hr {
     padding: 20px 0px 20px 0px;
     top: 0;
     left: 0;
+    transition: all 0.5s;
+    color: #b7b7b7;
+}
+
+.topNavBar.sticky{
+    background: white;
+    padding: 10px 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    color: #3d4451; 
 }
 
 .topNavBar .logo {
@@ -69,7 +78,7 @@ hr {
 
 .topNavBar nav a {
     font-size: 12px;
-    color: #b7b7b7;
+    color: inherit;
     padding-top: 5px;
     padding-bottom: 5px;
     text-decoration: none;
@@ -366,3 +375,4 @@ section.portfolio .works>.big,
 section.portfolio .works>.small {
     position: absolute;
 }
+

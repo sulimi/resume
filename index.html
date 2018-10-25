@@ -10,17 +10,17 @@
     .welcome1 {
       display: none;
       position: fixed;
-      top:0;
+      top: 0;
       left: 0;
       width: 100%;
-      height:100%;
+      height: 100%;
       background: #888;
       z-index: 1;
       justify-content: center;
       align-items: center;
     }
 
-    .welcome1.active{
+    .welcome1.active {
       display: flex;
     }
   </style>
@@ -183,9 +183,18 @@
   </section>
   <script>
     var welcome1 = document.querySelector('.welcome1')
-    welcome1.classList.remove('active')
-    console.log(welcome1)
+    setTimeout(() => {
+      welcome1.classList.remove('active')
+    }, 1500)
 
+    window.onscroll = function () {
+      var topNavBar = document.querySelector('.topNavBar')
+      if (window.scrollY > 0) {
+        topNavBar.classList.add('sticky')
+      } else {
+        topNavBar.classList.remove('sticky')
+      }
+    }
   </script>
 </body>
 
