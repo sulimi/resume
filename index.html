@@ -39,16 +39,16 @@
         <ul class="clearfix">
           <li><a href="#">关于</a></li>
           <li><a href="#">技能</a></li>
-          <li>
-            <a class="menuTigger" href="#">作品</a>
+          <li class="menuTigger">
+            <a href="#">作品</a>
             <ul class="submenu">
               <li>zzzzzz1</li>
               <li>zzzzzz2</li>
               <li>zzzzzz3</li>
             </ul>
           </li>
-          <li>
-            <a class="menuTigger" href="#">博客</a>
+          <li class="menuTigger" >
+            <a href="#">博客</a>
             <ul class="submenu">
               <li>zzzzzz1</li>
               <li>zzzzzz2</li>
@@ -210,22 +210,16 @@
       }
     }
 
-    let aTags = document.querySelectorAll('.menuTigger')
-    for (let i = 0; i < aTags.length; i++) {
-      aTags[i].onmouseenter = function (x) {
-        let a = x.target
-        let brother = a.nextSibling
-        while (brother.nodeType === 3) {
-          brother = brother.nextSibling
-        }
+    let liTags = document.querySelectorAll('.menuTigger')
+    for (let i = 0; i < liTags.length; i++) {
+      liTags[i].onmouseenter = function (x) {
+        let li = x.target
+        let brother = li.querySelector('ul')
         brother.classList.add('active')
       }
-      aTags[i].onmouseleave = function (x) {
-        let a = x.target
-        let brother = a.nextSibling
-        while (brother.nodeType === 3) {
-          brother = brother.nextSibling
-        }
+      liTags[i].onmouseleave = function (x) {
+        let li = x.target
+        let brother = li.querySelector('ul')
         brother.classList.remove('active')
       }
     }
