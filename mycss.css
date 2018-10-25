@@ -102,7 +102,7 @@ hr {
     border-bottom: 3px solid transparent;
 }
 
-.topNavBar nav ul>li>a:hover::after {
+.topNavBar nav ul>li.active>a::after {
     content: '';
     display: block;
     margin: 3px 0 0 0;
@@ -117,16 +117,19 @@ hr {
 .topNavBar .submenu {
     display: none;
     position: absolute;
-    left: 0;
+    right: 0;
     top: 27px;
+    background: white;
+    color: #3D4451;
 }
 
-.topNavBar .submenu.active {
+.topNavBar li.active > .submenu {
     display: block;
 }
 
 .topNavBar .submenu > li {
     white-space: nowrap;
+    padding: 5px 8px;
 }
 @keyframes menuSlide{
     0% {

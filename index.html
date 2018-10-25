@@ -213,14 +213,10 @@
     let liTags = document.querySelectorAll('.menuTigger')
     for (let i = 0; i < liTags.length; i++) {
       liTags[i].onmouseenter = function (x) {
-        let li = x.target
-        let brother = li.querySelector('ul')
-        brother.classList.add('active')
+        x.target.classList.add('active')
       }
       liTags[i].onmouseleave = function (x) {
-        let li = x.target
-        let brother = li.querySelector('ul')
-        brother.classList.remove('active')
+        x.target.classList.remove('active')
       }
     }
   </script>
