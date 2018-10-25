@@ -121,10 +121,21 @@ hr {
     top: 27px;
     background: white;
     color: #3D4451;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5)
 }
 
 .topNavBar li.active > .submenu {
     display: block;
+    animation: submenuSlider 0.3s;
+}
+
+@keyframes submenuSlider {
+    0% {
+        margin-right: 100%;
+    }
+    100% {
+        margin-right: 0%;
+    }
 }
 
 .topNavBar .submenu > li {

@@ -35,11 +35,11 @@
       <a class="logo" href="#" alt="logo" style="float: left; ">
         <span class="rs">RS</span><span class="card">card</span>
       </a>
-      <nav style="float: right;">
+      <nav class="menu" style="float: right;">
         <ul class="clearfix">
           <li><a href="#">关于</a></li>
           <li><a href="#">技能</a></li>
-          <li class="menuTigger">
+          <li>
             <a href="#">作品</a>
             <ul class="submenu">
               <li>zzzzzz1</li>
@@ -47,7 +47,7 @@
               <li>zzzzzz3</li>
             </ul>
           </li>
-          <li class="menuTigger" >
+          <li>
             <a href="#">博客</a>
             <ul class="submenu">
               <li>zzzzzz1</li>
@@ -210,7 +210,7 @@
       }
     }
 
-    let liTags = document.querySelectorAll('.menuTigger')
+    let liTags = document.querySelectorAll('nav.menu> ul > li')
     for (let i = 0; i < liTags.length; i++) {
       liTags[i].onmouseenter = function (x) {
         x.target.classList.add('active')
