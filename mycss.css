@@ -38,6 +38,15 @@ hr {
     display: block;
 }
 
+[data-x].offset{
+    transform: translateY(100px);
+  }
+  
+[data-x]{
+transform: translateY(0);
+transition: all 0.5s;
+}
+
 .topNavBar {
     position: fixed;
     width: 100%;
@@ -103,7 +112,8 @@ hr {
     border-bottom: 3px solid transparent;
 } */
 
-.topNavBar nav ul>li.active>a::after {
+.topNavBar nav ul>li.active>a::after,
+.topNavBar nav ul>li.highlight>a::after {
     content: '';
     position: absolute;
     display: block;
