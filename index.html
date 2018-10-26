@@ -195,6 +195,8 @@
     </div>
 
   </section>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
   <script>
     var welcome1 = document.querySelector('.welcome1')
     setTimeout(() => {
@@ -219,7 +221,15 @@
         x.target.classList.remove('active')
       }
     }
+
     let aTags = document.querySelectorAll('nav.menu> ul > li > a')
+
+    function animate(time) {
+      requestAnimationFrame(animate);
+      TWEEN.update(time);
+    }
+    requestAnimationFrame(animate);
+
     for (let i = 0; i < aTags.length; i++) {
       aTags[i].onclick = function (x) {
         x.preventDefault()
@@ -227,7 +237,22 @@
         let href = a.getAttribute('href')
         let element = document.querySelector(href)
         let top = element.offsetTop
-        window.scrollTo(0, top - 70 )
+
+        let currentTop = window.scrollY
+        let targetTop = top - 60
+        var coords = {y: currentTop}
+        let s = targetTop - currentTop
+        var t = Math.abs((s/100)*300)
+        if(t>500){ t = 500 }
+        var tween = new TWEEN.Tween(coords)
+            .to({y: targetTop}, t)
+            .easing(TWEEN.Easing.Quadratic.InOut)
+            .onUpdate(function(){
+                window.scrollTo(0,coords.y)
+                console.log(coords.y)
+            })
+            .start(); 
+        console.log('1')
       }
     }
   </script>
