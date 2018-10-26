@@ -53,6 +53,7 @@ hr {
     padding: 10px 0px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     color: #3d4451; 
+    z-index: 1;
 }
 
 .topNavBar .logo {
@@ -98,12 +99,13 @@ hr {
     position: relative;
 }
 
-.topNavBar nav ul>li>a {
+/* .topNavBar nav ul>li>a {
     border-bottom: 3px solid transparent;
-}
+} */
 
 .topNavBar nav ul>li.active>a::after {
     content: '';
+    position: absolute;
     display: block;
     margin: 3px 0 0 0;
     top:100%;
