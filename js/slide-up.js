@@ -34,4 +34,5 @@
         }
         li.classList.add('highlight')
     }
+    console.log('done')
 }.call()
