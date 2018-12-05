@@ -51,5 +51,4 @@
         },
     }
     controller.init(view)
-    console.log(view)
 }.call()
