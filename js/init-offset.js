@@ -5,15 +5,9 @@
     }
 
     findClosest()
-    window.onscroll = function () {
-        var topNavBar = document.querySelector('.topNavBar')
-        if (window.scrollY > 0) {
-            topNavBar.classList.add('sticky')
-        } else {
-            topNavBar.classList.remove('sticky')
-        }
+    window.addEventListener('scroll', () => {
         findClosest()
-    }
+    })
 
     function findClosest() {
         let specialTags = document.querySelectorAll('[data-x]')
