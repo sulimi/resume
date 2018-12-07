@@ -199,14 +199,27 @@
       <div class="swiper-button-next"></div>
     </div>
   </section>
+  <section class="messageSite">
+    <h2>留言板</h2>
+    <ol id="messageList"></ol>
+    <form id="messageForm">
+      <label for="">姓名</label>
+      <input type="text" name="name">
+      <label for="">内容</label>
+      <input type="text" name="content">
+      <input type="submit" value="提交">
+    </form>
+  </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
-  <script src="./js/init-swiper.js"></script>
+  <script src="js/init-swiper.js"></script>
   <script src="js/nav-active.js"></script>
   <script src="js/smoothly-navigation.js"></script>
   <script src="js/welcome.js"></script>
   <script src="js/init-offset.js"></script>
   <script src="js/navBar-sticky.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.11.0/dist/av-live-query-min.js"></script>
+  <script src="js/message.js"></script>
 </body>
 
 </html>
