@@ -60,15 +60,20 @@
       })
     },
     saveMessage: function () {
-      let content = this.form.querySelector('input[name=content]').value
-      let name = this.form.querySelector('input[name=name]').value
-      this.model.save(name, content).then(function (object) {
-        let li = document.createElement('li')
-        li.innerText = `${object.attributes.name}:${object.attributes.content}`
-        messageList.appendChild(li)
-        this.form.querySelector('input[name=content]').value = ''
-        this.form.querySelector('input[name=name]').value = ''
-      })
+      if (this.form.querySelector('input[name=content]').value &&
+        this.form.querySelector('input[name=name]').value) {
+        let content = this.form.querySelector('input[name=content]').value
+        let name = this.form.querySelector('input[name=name]').value
+        this.model.save(name, content).then(function (object) {
+          let li = document.createElement('li')
+          li.innerText = `${object.attributes.name}:${object.attributes.content}`
+          messageList.appendChild(li)
+          this.form.querySelector('input[name=content]').value = ''
+          this.form.querySelector('input[name=name]').value = ''
+        })
+      } else {
+        alert('姓名和内容不能为空哦')
+      }
     }
   }
   controller.init(view, model)
